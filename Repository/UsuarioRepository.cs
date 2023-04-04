@@ -1,9 +1,16 @@
+using API_CRUD.Data;
 using API_CRUD.Models;
 
 namespace API_CRUD.Repository
 {
     public class UsuarioRepository : IUsuarioRepository
     {
+        private readonly UsuarioContext _context;
+
+        public UsuarioRepository(UsuarioContext context)
+        {
+            _context = context;
+        }
         public void AdicionaUsuario(Usuario usuario)
         {
             throw new NotImplementedException();
