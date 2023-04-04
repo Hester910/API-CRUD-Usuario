@@ -65,5 +65,18 @@ namespace API_CRUD.Controllers
                     : BadRequest("Erro ao atualizar usuário.");
 
         }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete(int id)
+        {
+            var usuarioBanco = await _repository.BuscaUsuario(id);
+            if (usuarioBanco == null) return NotFound("Usuário não encontrado.");
+
+            _repository.DeletaUsuario(usuarioBanco);
+
+            return await _repository.SaveChangesAsync()
+                ? Ok("Usuário deletado com sucesso!")
+                : BadRequest("Erro ao deletar usuário.");
+        }
     }
 }

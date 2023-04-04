@@ -35,7 +35,7 @@ namespace API_CRUD.Repository
 
         public void DeletaUsuario(Usuario usuario)
         {
-            throw new NotImplementedException();
+            _context.Remove(usuario);
         }
 
         public async Task<bool> SaveChangesAsync()
