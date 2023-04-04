@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\Hadassa\\Documents\\API CRUD\\API CRUD.csproj": {}
+    "C:\\Users\\Hadassa\\Documents\\API CRUD\\API CRUD.csproj": {}
   },
   "projects": {
-    "c:\\Users\\Hadassa\\Documents\\API CRUD\\API CRUD.csproj": {
+    "C:\\Users\\Hadassa\\Documents\\API CRUD\\API CRUD.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\Hadassa\\Documents\\API CRUD\\API CRUD.csproj",
+        "projectUniqueName": "C:\\Users\\Hadassa\\Documents\\API CRUD\\API CRUD.csproj",
         "projectName": "API CRUD",
-        "projectPath": "c:\\Users\\Hadassa\\Documents\\API CRUD\\API CRUD.csproj",
+        "projectPath": "C:\\Users\\Hadassa\\Documents\\API CRUD\\API CRUD.csproj",
         "packagesPath": "C:\\Users\\Hadassa\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\Hadassa\\Documents\\API CRUD\\obj\\",
+        "outputPath": "C:\\Users\\Hadassa\\Documents\\API CRUD\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Hadassa\\AppData\\Roaming\\NuGet\\NuGet.Config"
