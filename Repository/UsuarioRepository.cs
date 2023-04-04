@@ -30,7 +30,7 @@ namespace API_CRUD.Repository
 
         public void AtualizaUsuario(Usuario usuario)
         {
-            throw new NotImplementedException();
+            _context.Update(usuario);
         }
 
         public void DeletaUsuario(Usuario usuario)

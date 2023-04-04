@@ -47,5 +47,23 @@ namespace API_CRUD.Controllers
                 ? Ok(usuario)
                 : NotFound("Usuário não encontrado");
         }
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> Put(int id, Usuario usuario)
+        {
+            var usuarioBanco = await _repository.BuscaUsuario(id);
+            if (usuarioBanco == null) return NotFound("Usuário não encontrado");
+
+            usuarioBanco.Nome = usuario.Nome ?? usuarioBanco.Nome;
+            usuarioBanco.DataNascimento = usuario.DataNascimento != new DateTime()
+                ? usuario.DataNascimento : usuarioBanco.DataNascimento;
+
+            _repository.AtualizaUsuario(usuarioBanco);
+
+            return await _repository.SaveChangesAsync()
+                    ? Ok("Usuário atualizado com sucesso!")
+                    : BadRequest("Erro ao atualizar usuário.");
+
+        }
     }
 }
