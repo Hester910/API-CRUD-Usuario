@@ -18,14 +18,23 @@ namespace API_CRUD.Controllers
         {
             _repository = repository;
         }
-        [HttpGet]
 
+        [HttpGet]
         public async Task<IActionResult> Get()
         {
             var usuarios = await _repository.BuscaUsuarios();
             return usuarios.Any()
                 ? Ok(usuarios)
                 : NoContent();
+        }
+
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetById(int id)
+        {
+            var usuario = await _repository.BuscaUsuario(id);
+            return usuario != null
+                ? Ok(usuario)
+                : NotFound("Usuário não encontrado");
         }
     }
 }

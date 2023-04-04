@@ -18,9 +18,9 @@ namespace API_CRUD.Repository
             return await _context.Usuarios.ToListAsync();
         }
 
-        public Task<Usuario> BuscaUsuario(int id)
+        public async Task<Usuario> BuscaUsuario(int id)
         {
-            throw new NotImplementedException();
+            return await _context.Usuarios.Where(x => x.Id == id).FirstOrDefaultAsync();
         }
 
         public void AdicionaUsuario(Usuario usuario)
