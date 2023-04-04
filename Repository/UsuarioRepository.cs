@@ -25,7 +25,7 @@ namespace API_CRUD.Repository
 
         public void AdicionaUsuario(Usuario usuario)
         {
-            throw new NotImplementedException();
+            _context.Add(usuario);
         }
 
         public void AtualizaUsuario(Usuario usuario)

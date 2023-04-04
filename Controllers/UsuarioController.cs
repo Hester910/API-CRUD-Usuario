@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using API_CRUD.Models;
 using API_CRUD.Repository;
 using Microsoft.AspNetCore.Mvc;
 
@@ -26,6 +27,16 @@ namespace API_CRUD.Controllers
             return usuarios.Any()
                 ? Ok(usuarios)
                 : NoContent();
+        }
+
+        [HttpPost]
+
+        public async Task<IActionResult> Post(Usuario usuario)
+        {
+            _repository.AdicionaUsuario(usuario);
+            return await _repository.SaveChangesAsync()
+                ? Ok("Usuário adicionado com sucesso!")
+                : BadRequest("Erro ao salvar usuário.");
         }
 
         [HttpGet("{id}")]
