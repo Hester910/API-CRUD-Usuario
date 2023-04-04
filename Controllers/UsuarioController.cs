@@ -20,9 +20,12 @@ namespace API_CRUD.Controllers
         }
         [HttpGet]
 
-        public string Get()
+        public async Task<IActionResult> Get()
         {
-            return "Funciona!";
+            var usuarios = await _repository.BuscaUsuarios();
+            return usuarios.Any()
+                ? Ok(usuarios)
+                : NoContent();
         }
     }
 }

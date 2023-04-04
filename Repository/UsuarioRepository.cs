@@ -1,5 +1,6 @@
 using API_CRUD.Data;
 using API_CRUD.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace API_CRUD.Repository
 {
@@ -11,14 +12,10 @@ namespace API_CRUD.Repository
         {
             _context = context;
         }
-        public void AdicionaUsuario(Usuario usuario)
-        {
-            throw new NotImplementedException();
-        }
 
-        public void AtualizaUsuario(Usuario usuario)
+        public async Task<IEnumerable<Usuario>> BuscaUsuarios()
         {
-            throw new NotImplementedException();
+            return await _context.Usuarios.ToListAsync();
         }
 
         public Task<Usuario> BuscaUsuario(int id)
@@ -26,7 +23,12 @@ namespace API_CRUD.Repository
             throw new NotImplementedException();
         }
 
-        public Task<IEnumerable<Usuario>> BuscaUsuarios()
+        public void AdicionaUsuario(Usuario usuario)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void AtualizaUsuario(Usuario usuario)
         {
             throw new NotImplementedException();
         }
