@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Hadassa\\Documents\\API CRUD\\API CRUD.csproj": {}
+    "c:\\Users\\Hadassa\\Documents\\API CRUD\\API CRUD.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Hadassa\\Documents\\API CRUD\\API CRUD.csproj": {
+    "c:\\Users\\Hadassa\\Documents\\API CRUD\\API CRUD.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Hadassa\\Documents\\API CRUD\\API CRUD.csproj",
+        "projectUniqueName": "c:\\Users\\Hadassa\\Documents\\API CRUD\\API CRUD.csproj",
         "projectName": "API CRUD",
-        "projectPath": "C:\\Users\\Hadassa\\Documents\\API CRUD\\API CRUD.csproj",
+        "projectPath": "c:\\Users\\Hadassa\\Documents\\API CRUD\\API CRUD.csproj",
         "packagesPath": "C:\\Users\\Hadassa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Hadassa\\Documents\\API CRUD\\obj\\",
+        "outputPath": "c:\\Users\\Hadassa\\Documents\\API CRUD\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Hadassa\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -41,6 +41,10 @@
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[7.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.4, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
