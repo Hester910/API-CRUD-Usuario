@@ -36,9 +36,9 @@ namespace API_CRUD.Repository
             throw new NotImplementedException();
         }
 
-        public Task<bool> SaveChangesAsync()
+        public async Task<bool> SaveChangesAsync()
         {
-            throw new NotImplementedException();
+            return await _context.SaveChangesAsync() > 0;
         }
     }
 }
